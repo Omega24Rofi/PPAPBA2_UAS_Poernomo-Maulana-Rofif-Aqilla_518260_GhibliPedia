@@ -55,6 +55,7 @@
                 android:drawableStart="@drawable/outline_mail_24"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/brown"
+                android:inputType="textEmailAddress"
                 android:hint="Email"
                 android:padding="12dp" />
 
@@ -68,6 +69,7 @@
                 android:drawableStart="@drawable/baseline_lock_outline_24"
                 android:drawablePadding="8dp"
                 android:drawableTint="@color/brown"
+                android:inputType="textPassword"
                 android:hint="Password"
                 android:padding="12dp" />
 
@@ -88,7 +90,7 @@
                 android:id="@+id/reg_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Login"
+                android:text="Register"
                 android:paddingVertical="15dp"
                 android:fontFamily="@font/montserrat_bold"
                 android:backgroundTint="@color/green"/>
