@@ -62,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                                     prefManager.saveEmail(it.email)
                                     prefManager.saveRole(it.role)
                                     isLogin()
-                                    finish()
+//                                    finish()
                                 }
 
                             }
