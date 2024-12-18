@@ -33,7 +33,7 @@
 
         </activity>
         <activity
-            android:name=".RegisterActivity"
+            android:name=".Auth.RegisterActivity"
             android:exported="true">
 
         </activity>
