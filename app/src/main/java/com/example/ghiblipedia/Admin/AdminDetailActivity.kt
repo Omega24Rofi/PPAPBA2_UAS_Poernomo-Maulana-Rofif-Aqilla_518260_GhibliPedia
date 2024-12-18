@@ -1,6 +1,7 @@
 package com.example.ghiblipedia.Admin
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.example.ghiblipedia.databinding.ActivityAdminDetailBinding
@@ -11,6 +12,7 @@ class AdminDetailActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityAdminDetailBinding.inflate(layoutInflater)
+        enableEdgeToEdge()
         setContentView(binding.root)
 
         // Get data from intent

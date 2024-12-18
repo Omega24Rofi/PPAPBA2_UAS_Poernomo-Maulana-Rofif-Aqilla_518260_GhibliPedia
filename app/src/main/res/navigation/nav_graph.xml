@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/home_fragment"
-        android:name="com.example.ghiblipedia.Fragment.HomeFragment"
+        android:name="com.example.ghiblipedia.User.Fragment.HomeFragment"
         tools:layout="@layout/fragment_home"
         android:label="home_fragment"
         />
     <fragment
         android:id="@+id/favorite_fragment"
-        android:name="com.example.ghiblipedia.Fragment.FavoriteFragment"
+        android:name="com.example.ghiblipedia.User.Fragment.FavoriteFragment"
         tools:layout="@layout/fragment_favorite"
         android:label="favorite_fragment"
         />

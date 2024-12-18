@@ -1,6 +1,7 @@
 package com.example.ghiblipedia.User
 
 import android.os.Bundle
+import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.ghiblipedia.R
@@ -17,7 +18,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        enableEdgeToEdge()
         // Set default fragment
         replaceFragment(HomeFragment())
 
