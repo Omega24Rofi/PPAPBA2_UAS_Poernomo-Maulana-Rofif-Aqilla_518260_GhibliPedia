@@ -3,7 +3,7 @@ package com.example.ghiblipedia.User
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.fragment.app.Fragment
+import androidx.fragment.app.Fragment as Frag
 import com.example.ghiblipedia.R
 import com.example.ghiblipedia.User.Fragment.HomeFragment
 import com.example.ghiblipedia.User.Fragment.FavoriteFragment
@@ -33,7 +33,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    private fun replaceFragment(fragment: Fragment) {
+    private fun replaceFragment(fragment: Frag) {
         supportFragmentManager
             .beginTransaction()
             .replace(R.id.frame_container, fragment)
