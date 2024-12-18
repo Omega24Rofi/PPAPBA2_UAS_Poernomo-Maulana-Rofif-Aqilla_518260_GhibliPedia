@@ -13,6 +13,8 @@ class PrefManager private constructor(context: Context){
         private const val KEY_EMAIL = "email"
         private const val KEY_PASSWORD = "password"
         private const val KEY_ROLE = "role"
+        private const val USER_ROLE = "userRole"
+        private const val USER_ID = "userId"
 
         @Volatile
         private var instance: PrefManager? =null
@@ -75,6 +77,13 @@ class PrefManager private constructor(context: Context){
     fun getRole(): String { // Tambahkan metode untuk mengambil role
         return sharedPreferences.getString(KEY_ROLE, "user") ?: "user"
     }
+
+    fun setUserId(id: String) {
+       sharedPreferences.edit().putString(USER_ID, id).apply()
+   }
+    fun getId(): String {
+       return sharedPreferences.getString(USER_ID, "") ?: ""
+   }
 
     fun clear() {
         val editor = sharedPreferences.edit()

@@ -8,6 +8,7 @@
     android:background="@color/cream">
 
     <ImageView
+        android:id="@+id/back_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/baseline_back"
@@ -19,6 +20,7 @@
         android:orientation="horizontal"
         android:layout_height="wrap_content">
         <ImageView
+            android:id="@+id/movieImage"
             android:layout_width="120dp"
             android:layout_height="150dp"
             android:src="@drawable/profile_totoro"

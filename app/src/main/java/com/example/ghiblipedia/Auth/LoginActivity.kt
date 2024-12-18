@@ -16,6 +16,7 @@ import com.example.ghiblipedia.Network.ApiClient
 import com.example.ghiblipedia.User.HomeActivity
 import com.example.ghiblipedia.databinding.ActivityLoginBinding
 import com.example.ghiblipedia.Admin.AdminActivity
+import com.example.ghiblipedia.Auth.RegisterActivity
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -61,8 +62,9 @@ class LoginActivity : AppCompatActivity() {
                                     prefManager.savePassword(binding.Password.text.toString())
                                     prefManager.saveEmail(it.email)
                                     prefManager.saveRole(it.role)
+                                    prefManager.setUserId(it.id!!)
                                     isLogin()
-//                                    finish()
+                                    handleLoginSuccess(it.id, it.role)
                                 }
 
                             }
@@ -108,5 +110,20 @@ class LoginActivity : AppCompatActivity() {
                 startActivity(intentToHome)
             }
         }
+    }
+    private fun handleLoginSuccess(userId: String, role: String) {
+        prefManager.setLoggedIn(true)
+        prefManager.saveRole(role)
+        prefManager.setUserId(userId)
+        
+        when (role.lowercase()) {
+            "admin" -> {
+                startActivity(Intent(this, AdminActivity::class.java))
+            }
+            "user" -> {
+                startActivity(Intent(this, HomeActivity::class.java))
+            }
+        }
+        finish()
     }
 }

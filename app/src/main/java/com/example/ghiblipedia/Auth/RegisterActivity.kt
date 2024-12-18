@@ -1,9 +1,10 @@
-package com.example.ghiblipedia
+package com.example.ghiblipedia.Auth
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ghiblipedia.LoginActivity
 import com.example.ghiblipedia.databinding.ActivityRegisterBinding
 import com.example.ghiblipedia.Model.User.User
 import com.example.ghiblipedia.Network.ApiClient
